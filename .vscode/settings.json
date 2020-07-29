@@ -1,0 +1,8 @@
+{
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "typescript.validate.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,49 @@
+{
+  "name": "sketch-assistant-template",
+  "homepage": "https://github.com/sketch-hq/sketch-assistant-template",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "sketch": "dist/sketch.js",
+  "license": "MIT",
+  "sketch-assistant": {
+    "title": "Sketch Assistant Template",
+    "description": "Template repository for a starter Assistant project",
+    "icon": ""
+  },
+  "author": {
+    "name": "Your Name or Company Name"
+  },
+  "keywords": [
+    "sketch",
+    "sketch files",
+    "sketch assistant",
+    "public",
+    "assistant",
+    "design ops"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --no-cache",
+    "build": "rm -rf dist && npm run build:node && npm run build:sketch",
+    "build:node": "tsc",
+    "build:sketch": "webpack",
+    "package-tarball": "npm run build && npm pack"
+  },
+  "devDependencies": {
+    "@sketch-hq/sketch-assistant-utils": "6.0.0",
+    "@types/jest": "26.0.4",
+    "@types/node": "14.0.22",
+    "jest": "26.1.0",
+    "node-fetch": "2.6.0",
+    "prettier": "2.0.5",
+    "ts-jest": "26.1.2",
+    "typescript": "3.9.6",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12"
+  },
+  "dependencies": {
+    "@sketch-hq/sketch-assistant-types": "6.0.0"
+  }
+}
