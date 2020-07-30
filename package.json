@@ -1,17 +1,17 @@
 {
-  "name": "sketch-assistant-template",
-  "homepage": "https://github.com/sketch-hq/sketch-assistant-template",
+  "name": "sketch-color-contrast",
+  "homepage": "https://github.com/ygev/color-contrast-assistant",
   "version": "1.0.0",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "license": "MIT",
   "sketch-assistant": {
-    "title": "Sketch Assistant Template",
-    "description": "Template repository for a starter Assistant project",
+    "title": "Color Contrast Checker",
+    "description": "Ensure all color contrast passes WCAG 2.1 AA.",
     "icon": ""
   },
   "author": {
-    "name": "Your Name or Company Name"
+    "name": "Yana Gevorgyan"
   },
   "keywords": [
     "sketch",
