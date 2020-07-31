@@ -4,18 +4,17 @@ const textNoLoremIpsum: RuleDefinition = {
   rule: async (context) => {
     const { utils } = context
     // Iterate
-    for (const layer of utils.objects.text) {
-      const value = layer.attributedString.string
-      // Test
-      if (value.toLowerCase().includes('lorem ipsum')) {
-        // Report
-        utils.report(`Layer “${layer.name}” contains “lorem ipsum”`, layer)
+    for (const group of utils.objects.group) {
+      if (group.layers.length > 2 || group.layers.length <= 1) {
+        continue
+      } else {
+        utils.report(`Here are the layers:“${group.name}”`, group)
       }
     }
   },
   name: 'sketch-color-contrast/text-no-lorem-ipsum',
-  title: 'Text should not contain lorem ipsum',
-  description: 'Reports a violation when text layers contain lorem ipsum placeholder',
+  title: 'Color contrast should pass WCAG 2.1 AA.',
+  description: 'Color contrast does not pass WCAG 2.1 AA.',
 }
 
 const assistant: AssistantPackage = async () => {
