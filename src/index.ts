@@ -9,7 +9,7 @@ const textNoLoremIpsum: RuleDefinition = {
           continue
         } else {
           utils.report(
-            `Here are the layers:“${group.name}. Layer0 Color: ${group.layers[0].style?.fills?.[0].color.red}”`,
+            `Here are the layers:“${group.name}. Layer0 Color: ${group.layers[0].style?.fills?.[0]?.color?.red}, Layer1 Color: ${group.layers[1].style?.fills?.[0]?.color?.red}”`,
             group,
           )
         }
