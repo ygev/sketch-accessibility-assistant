@@ -18,7 +18,7 @@ const textNoLoremIpsum: RuleDefinition = {
   },
   name: 'sketch-color-contrast/text-no-lorem-ipsum',
   title: 'Color contrast should pass WCAG 2.1 AA.',
-  description: 'Color contrast does not pass WCAG 2.1 AA.',
+  description: 'There is not enough color contrast between the two elements.',
 }
 
 const assistant: AssistantPackage = async () => {
