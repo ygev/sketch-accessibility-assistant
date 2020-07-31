@@ -3,12 +3,16 @@ import { AssistantPackage, RuleDefinition } from '@sketch-hq/sketch-assistant-ty
 const textNoLoremIpsum: RuleDefinition = {
   rule: async (context) => {
     const { utils } = context
-    // Iterate
     for (const group of utils.objects.group) {
-      if (group.layers.length > 2 || group.layers.length <= 1) {
-        continue
-      } else {
-        utils.report(`Here are the layers:“${group.name}”`, group)
+      if (group.layers.length == 2) {
+        if (group.layers[0]._class == 'text' && group.layers[1]._class == 'text') {
+          continue
+        } else {
+          utils.report(
+            `Here are the layers:“${group.name}. Layer0 Color: ${group.layers[0].style?.fills?.[0].color.red}”`,
+            group,
+          )
+        }
       }
     }
   },
