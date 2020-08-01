@@ -8,7 +8,7 @@
   "sketch-assistant": {
     "title": "Color Contrast Checker",
     "description": "Ensure all color contrast passes WCAG 2.1 AA.",
-    "icon": ""
+    "icon": "https://i.imgur.com/ijYtOhk.png"
   },
   "author": {
     "name": "Yana Gevorgyan"
