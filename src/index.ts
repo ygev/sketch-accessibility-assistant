@@ -16,7 +16,7 @@ const assistant: AssistantPackage = async () => {
           active: true,
         },
         'sketch-color-contrast/aaa-contrast-text': {
-          active: true,
+          active: false,
         },
       },
     },
