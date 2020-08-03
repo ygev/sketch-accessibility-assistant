@@ -37,3 +37,9 @@ to add to your Sketch document.
 > [Experimental](https://add-sketch-assistant.now.sh/api/main?variant=experimental&pkg=@ygev/sketch-accessibility-assistant)
 > |
 > [Xcode](https://add-sketch-assistant.now.sh/api/main?variant=xcode&pkg=@ygev/sketch-accessibility-assistant)
+
+
+## Known Bugs
+- Layers inside groups are not detected yet.
+- Layers outside the artboard are not detected yet.
+- Very sensitive detection of overlap between layer coordinates. Planning to change it to 80%+ overlap, rather than 1%+ to avoid false negatives.
