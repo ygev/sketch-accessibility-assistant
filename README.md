@@ -20,9 +20,7 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 ## Rules
 
 - [Shapes must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-shape)
-  - Works only if the 2 layers are grouped.
 - [Text must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-text)
-  - Works only if the 2 layers are grouped.
 - [Text must meet AAA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aaa-contrast-text)
   - Works only if the 2 layers are grouped.
   - Set to `false` by default.
