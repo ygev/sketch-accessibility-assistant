@@ -7,3 +7,4 @@ dist
 .gitignore
 .prettierignore
 .prettierrc
+.nvmrc
