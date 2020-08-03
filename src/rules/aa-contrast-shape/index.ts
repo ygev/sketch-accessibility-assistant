@@ -7,7 +7,7 @@ export const AAContrastShape: RuleDefinition = {
     for (const artboard of utils.objects.artboard) {
       var maxLayers = artboard.layers.length
       for (var i = 0; i < maxLayers; i++) {
-        for (var j = i; j < maxLayers; j++) {
+        for (var j = i + 1; j < maxLayers; j++) {
           var botXmin = artboard.layers[i].frame.x
           var botYmin = artboard.layers[i].frame.y
           var botXmax = artboard.layers[i].frame.x + artboard.layers[i].frame.width
@@ -23,12 +23,16 @@ export const AAContrastShape: RuleDefinition = {
             var topG
             var topB
 
+            // if text (that is, if text color is defined), skip it
             if (artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red !== undefined) {
+              //utils.report(`text red is uhhh ${artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red}`, artboard.layers[j], artboard.layers[j])
               continue
             } else if (artboard.layers[j].style?.fills?.[0]?.color?.red !== undefined) {
               topR = artboard.layers[j].style?.fills?.[0]?.color?.red
               topG = artboard.layers[j].style?.fills?.[0]?.color?.green
               topB = artboard.layers[j].style?.fills?.[0]?.color?.blue
+            } else {
+              continue
             }
 
             var botR = artboard.layers[i].style?.fills?.[0]?.color?.red
@@ -50,7 +54,10 @@ export const AAContrastShape: RuleDefinition = {
               continue
             } else {
               // normal-size AA fail
-              utils.report(`Layers ${artboard.layers[i].name} and ${artboard.layers[j].name} do not pass WCAG 2.1 AA, and their contrast ratio is: ${ratio.toFixed(2)}:1`, artboard.layers[j])
+              utils.report(
+                `[debug: i:${i}, j:${j}] Layers ${artboard.layers[i].name} and ${artboard.layers[j].name} do not pass WCAG 2.1 AA, and their contrast ratio is: ${ratio.toFixed(2)}:1`,
+                artboard.layers[j],
+              )
             }
           }
         }

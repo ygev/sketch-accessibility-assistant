@@ -7,7 +7,7 @@ export const AAContrastText: RuleDefinition = {
     for (const artboard of utils.objects.artboard) {
       var maxLayers = artboard.layers.length
       for (var i = 0; i < maxLayers; i++) {
-        for (var j = i; j < maxLayers; j++) {
+        for (var j = 1; j < maxLayers; j++) {
           var botXmin = artboard.layers[i].frame.x
           var botYmin = artboard.layers[i].frame.y
           var botXmax = artboard.layers[i].frame.x + artboard.layers[i].frame.width

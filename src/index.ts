@@ -6,7 +6,7 @@ import { AAAContrastText } from './rules/aaa-contrast-text'
 const assistant: AssistantPackage = async () => {
   return {
     name: 'sketch-color-contrast',
-    rules: [AAContrastShape, AAContrastText, AAAContrastText],
+    rules: [AAContrastText, AAAContrastText, AAContrastShape],
     config: {
       rules: {
         'sketch-color-contrast/aa-contrast-text': {
