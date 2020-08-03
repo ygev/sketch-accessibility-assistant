@@ -10,7 +10,7 @@
       <img src="https://img.shields.io/badge/Sketch-68+-blue.svg?style=flat" alt="Contact">
     </a>
     <a href="https://opensource.org/licenses/GPL-3.0">
-      <img src="https://img.shields.io/badge/License-GPL 3.0-blue.svg" alt="License: GPL 3.0">
+      <img src="https://img.shields.io/badge/License-MIT 3.0-blue.svg" alt="License: MIT license">
     </a>
   </p>
 </h1>
