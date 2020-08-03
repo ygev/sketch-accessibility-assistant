@@ -23,6 +23,7 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 - [Text must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-text)
 - [Text must meet AAA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aaa-contrast-text)
   - Set to `false` by default.
+- [Text must not be justified.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-not-justified)
 
 👉 Click [here](https://add-sketch-assistant.now.sh/api/main?pkg=@ygev/sketch-accessibility-assistant)
 to add to your Sketch document.
