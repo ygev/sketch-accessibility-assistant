@@ -4,54 +4,65 @@ import { calcLum, calcContrast } from '../../contrast'
 export const AAContrastText: RuleDefinition = {
   rule: async (context) => {
     const { utils } = context
-    for (const group of utils.objects.group) {
-      if (group.layers.length == 2) {
-        if (group.layers[0]._class == 'text' && group.layers[1]._class == 'text') {
-          continue
-        } else {
-          var topR
-          var topG
-          var topB
+    for (const artboard of utils.objects.artboard) {
+      var maxLayers = artboard.layers.length
+      for (var i = 0; i < maxLayers; i++) {
+        for (var j = i; j < maxLayers; j++) {
+          var botXmin = artboard.layers[i].frame.x
+          var botYmin = artboard.layers[i].frame.y
+          var botXmax = artboard.layers[i].frame.x + artboard.layers[i].frame.width
+          var botYmax = artboard.layers[i].frame.y + artboard.layers[i].frame.height
 
-          // Determine if top layer is a shape or text.
-          if (group.layers[1].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red !== undefined) {
-            topR = group.layers[1].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red
-            topG = group.layers[1].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.green
-            topB = group.layers[1].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.blue
-          } else if (group.layers[1].style?.fills?.[0]?.color?.red !== undefined) {
-            continue
-          }
+          var topXmin = artboard.layers[j].frame.x
+          var topYmin = artboard.layers[j].frame.y
+          var topXmax = artboard.layers[j].frame.x + artboard.layers[j].frame.width
+          var topYmax = artboard.layers[j].frame.y + artboard.layers[j].frame.height
 
-          // In any case, the bottom is a shape.
-          var botR = group.layers[0].style?.fills?.[0]?.color?.red
-          var botG = group.layers[0].style?.fills?.[0]?.color?.green
-          var botB = group.layers[0].style?.fills?.[0]?.color?.blue
+          if (topXmin < botXmax && botXmin < topXmax && topYmin < botYmax && botYmin < topYmax) {
+            var topR
+            var topG
+            var topB
 
-          // Don't crash if something is undefined.
-          if (topR == undefined || topG == undefined || topB == undefined || botR == undefined || botG == undefined || botB == undefined) {
-            continue
-          }
+            // Determine if top layer is a shape or text.
+            if (artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red !== undefined) {
+              topR = artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red
+              topG = artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.green
+              topB = artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.blue
+            } else if (artboard.layers[j].style?.fills?.[0]?.color?.red !== undefined) {
+              continue
+            }
 
-          // Calculate Luminosity for Text RGB and Shape RGB
-          var topLum = calcLum(topR, topG, topB)
-          var botLum = calcLum(botR, botG, botB)
-          var ratio = calcContrast(topLum, botLum)
+            // In any case, the bottom is a shape.
+            var botR = artboard.layers[i].style?.fills?.[0]?.color?.red
+            var botG = artboard.layers[i].style?.fills?.[0]?.color?.green
+            var botB = artboard.layers[i].style?.fills?.[0]?.color?.blue
 
-          var txtSize = group.layers[1].style?.textStyle?.encodedAttributes.MSAttributedStringFontAttribute.attributes.size
-          if (txtSize == undefined) {
-            continue
-          }
+            // Don't crash if something is undefined.
+            if (topR == undefined || topG == undefined || topB == undefined || botR == undefined || botG == undefined || botB == undefined) {
+              continue
+            }
 
-          // If the ratio is 4.5 and above, it passes AA.
-          if (ratio >= 3 && txtSize >= 18) {
-            // large-size AA pass
-            continue
-          } else if (ratio >= 4.5 && txtSize < 18) {
-            // normal-size AA pass
-            continue
-          } else {
-            // in other cases, AA fail
-            utils.report(`These shape elements do not pass WCAG 2.1 AA, and their contrast ratio is: ${ratio.toFixed(2)}:1`, group)
+            // Calculate Luminosity for Text RGB and Shape RGB
+            var topLum = calcLum(topR, topG, topB)
+            var botLum = calcLum(botR, botG, botB)
+            var ratio = calcContrast(topLum, botLum)
+
+            var txtSize = artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringFontAttribute.attributes.size
+            if (txtSize == undefined) {
+              continue
+            }
+
+            // If the ratio is 4.5 and above, it passes AA.
+            if (ratio >= 3 && txtSize >= 18) {
+              // large-size AA pass
+              continue
+            } else if (ratio >= 4.5 && txtSize < 18) {
+              // normal-size AA pass
+              continue
+            } else {
+              // in other cases, AAA fail
+              utils.report(`Layers ${artboard.layers[i].name} and ${artboard.layers[j].name} do not pass WCAG 2.1 AA, and their contrast ratio is: ${ratio.toFixed(2)}:1`, artboard.layers[j])
+            }
           }
         }
       }
@@ -59,5 +70,5 @@ export const AAContrastText: RuleDefinition = {
   },
   name: 'sketch-color-contrast/aa-contrast-text',
   title: 'Text must meet AA color contrast compliance.',
-  description: 'There is not enough color contrast between the text and its background.',
+  description: 'There is not enough color contrast between the two text elements.',
 }
