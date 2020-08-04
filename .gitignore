@@ -1,0 +1,9 @@
+node_modules
+*.log
+.DS_Store
+dist
+/*.tgz
+.vscode
+.prettierignore
+.prettierrc
+.nvmrc
