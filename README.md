@@ -33,17 +33,17 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 ~~👉 Click [here](https://add-sketch-assistant.now.sh/api/main?pkg=@ygev/sketch-accessibility-assistant)
 to add to your Sketch document.~~
 
-~~> Or, add using a Sketch release variant:
-> [Beta](https://add-sketch-assistant.now.sh/api/main?variant=beta&pkg=@ygev/sketch-accessibility-assistant)
-> |
-> [Private](https://add-sketch-assistant.now.sh/api/main?variant=private&pkg=@ygev/sketch-accessibility-assistant)
-> |
-> [Internal](https://add-sketch-assistant.now.sh/api/main?variant=internal&pkg=@ygev/sketch-accessibility-assistant)
-> |
-> [Experimental](https://add-sketch-assistant.now.sh/api/main?variant=experimental&pkg=@ygev/sketch-accessibility-assistant)
-> |
-> [Xcode](https://add-sketch-assistant.now.sh/api/main?variant=xcode&pkg=@ygev/sketch-accessibility-assistant)
-~~
+~~> Or, add using a Sketch release variant:~~
+~~> [Beta](https://add-sketch-assistant.now.sh/api/main?variant=beta&pkg=@ygev/sketch-accessibility-assistant)~~
+~~> |~~
+~~> [Private](https://add-sketch-assistant.now.sh/api/main?variant=private&pkg=@ygev/sketch-accessibility-assistant)~~
+~~> |~~
+~~> [Internal](https://add-sketch-assistant.now.sh/api/main?variant=internal&pkg=@ygev/sketch-accessibility-assistant)~~
+~~> |~~
+~~> [Experimental](https://add-sketch-assistant.now.sh/api/main?variant=experimental&pkg=@ygev/sketch-accessibility-assistant)~~
+~~> |~~
+~~> [Xcode](https://add-sketch-assistant.now.sh/api/main?variant=xcode&pkg=@ygev/sketch-accessibility-assistant)~~
+
 
 ## Known Bugs
 - Layers inside groups are not detected yet.
