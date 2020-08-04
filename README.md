@@ -1,7 +1,8 @@
 <p align="center">
-<h1 align="center">
   <img align="center" src="https://i.imgur.com/ijYtOhk.png" width="125" alt="icon">
+</p>
 <br>
+<p align="center">
   <h1 align="center">Sketch Accessibility Assistant</h1>
 </p>
  <p align="center">
