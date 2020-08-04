@@ -25,7 +25,7 @@ export const AAContrastShape: RuleDefinition = {
 
             // if text (that is, if text color is defined), skip it
             if (artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red !== undefined) {
-              //utils.report(`text red is uhhh ${artboard.layers[j].style?.textStyle?.encodedAttributes.MSAttributedStringColorAttribute?.red}`, artboard.layers[j], artboard.layers[j])
+              
               continue
             } else if (artboard.layers[j].style?.fills?.[0]?.color?.red !== undefined) {
               topR = artboard.layers[j].style?.fills?.[0]?.color?.red
