@@ -27,10 +27,13 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 - [Line spacing must be at least 1.5x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-line-height)
 - [Letter spacing must be at least 0.12x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-letter-spacing)
 
-**⚠️ One-click downloads with Sketch are currently down. Please download it directly from GitHub or [npm](https://www.npmjs.com/package/sketch-accessibility-assistant) and Add from Archive.**
+## Installation 
 
-~~👉 Click [here](https://add-sketch-assistant.now.sh/api/main?pkg=@ygev/sketch-accessibility-assistant)
-to add to your Sketch document.~~
+👉 Click [here](https://add-sketch-assistant.now.sh/api/main?pkg=sketch-accessibility-assistant)
+to add to your Sketch document.
+
+> Or, add using a Sketch release variant:
+> [Beta](https://add-sketch-assistant.now.sh/api/main?variant=beta&pkg=sketch-accessibility-assistant)
 
 ## Known Bugs
 - Layers inside groups are not detected yet.
