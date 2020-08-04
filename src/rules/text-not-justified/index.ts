@@ -16,5 +16,5 @@ export const textNotJustified: RuleDefinition = {
   name: 'sketch-accessibility-assistant/text-not-justified',
   title: 'Text must not be justified.',
   description:
-    'TJustification makes reading more difficult because extra space between words causes "rivers of white" making it difficult to track along a line of text, or less space between words makes it difficult to distinguish separate words.',
+    'Justification makes reading more difficult because extra space between words causes "rivers of white" making it difficult to track along a line of text, or less space between words makes it difficult to distinguish separate words.',
 }
