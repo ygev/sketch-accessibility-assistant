@@ -1,7 +1,9 @@
+<p align="center">
 <h1 align="center">
   <img align="center" src="https://i.imgur.com/ijYtOhk.png" width="125" alt="icon">
 <br>
   <h1 align="center">Sketch Accessibility Assistant</h1>
+</p>
  <p align="center">
   <img src="https://i.imgur.com/OvLMEjK.png" width="500" alt="Accessibility Assistant in action.">
 </p>
