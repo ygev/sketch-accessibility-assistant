@@ -3,7 +3,7 @@
 <br>
   <h1 align="center">Sketch Accessibility Assistant</h1>
  <p align="center">
-  <img src="https://i.imgur.com/cstmMYz.png" width="500" alt="Accessibility Assistant in action.">
+  <img src="https://i.imgur.com/OvLMEjK.png" width="500" alt="Accessibility Assistant in action.">
 </p>
   <p align="center">
     <a href="mailto:ygis@mit.edu">
