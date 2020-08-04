@@ -2,7 +2,7 @@
   <img align="center" src="https://i.imgur.com/ijYtOhk.png" width="125" alt="icon">
 </p>
 <br>
-  <h1 align="center">Sketch Accessibility Assistant</h1>
+  <h2 align="center">Sketch Accessibility Assistant</h2>
  <p align="center">
   <img src="https://i.imgur.com/OvLMEjK.png" width="500" alt="Accessibility Assistant in action.">
 </p>
@@ -23,7 +23,6 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 - [Shapes must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-shape)
 - [Text must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-text)
 - [Text must meet AAA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aaa-contrast-text)
-  - Set to `false` by default.
 - [Text must not be justified.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-not-justified)
 - [Line spacing must be at least 1.5x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-line-height)
 - [Letter spacing must be at least 0.12x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-letter-spacing)
