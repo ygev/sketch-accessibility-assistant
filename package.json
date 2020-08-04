@@ -1,13 +1,13 @@
 {
-  "name": "sketch-color-contrast",
-  "homepage": "https://github.com/ygev/color-contrast-assistant",
-  "version": "1.0.0",
+  "name": "sketch-accessibility-assistant",
+  "homepage": "https://github.com/ygev/sketch-accessibility-assistant",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "license": "MIT",
   "sketch-assistant": {
-    "title": "Color Contrast Checker",
-    "description": "Ensure all color contrast passes WCAG 2.1 AA.",
+    "title": "Accessibility",
+    "description": "Ensure your document is accessible and compliant with WCAG 2.1",
     "icon": "https://i.imgur.com/ijYtOhk.png"
   },
   "author": {
@@ -19,7 +19,11 @@
     "sketch assistant",
     "public",
     "assistant",
-    "design ops"
+    "design ops",
+    "accessibility",
+    "a11y",
+    "contrast",
+    "color-contrast"
   ],
   "files": [
     "dist"

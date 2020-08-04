@@ -68,7 +68,7 @@ export const AAContrastText: RuleDefinition = {
       }
     }
   },
-  name: 'sketch-color-contrast/aa-contrast-text',
+  name: 'sketch-accessibility-assistant/aa-contrast-text',
   title: 'Text must meet AA color contrast compliance.',
   description: 'There is not enough color contrast between the two text elements.',
 }

@@ -64,7 +64,7 @@ export const AAContrastShape: RuleDefinition = {
       }
     }
   },
-  name: 'sketch-color-contrast/aa-contrast-shape',
+  name: 'sketch-accessibility-assistant/aa-contrast-shape',
   title: 'Shapes must meet AA color contrast compliance.',
   description: 'There is not enough color contrast between the two shape elements.',
 }

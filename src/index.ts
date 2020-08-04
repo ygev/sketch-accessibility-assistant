@@ -6,20 +6,20 @@ import { textNotJustified } from './rules/text-not-justified'
 
 const assistant: AssistantPackage = async () => {
   return {
-    name: 'sketch-color-contrast',
+    name: 'sketch-accessibility-assistant',
     rules: [AAContrastText, AAAContrastText, AAContrastShape, textNotJustified],
     config: {
       rules: {
-        'sketch-color-contrast/aa-contrast-text': {
+        'sketch-accessibility-assistant/aa-contrast-text': {
           active: true,
         },
-        'sketch-color-contrast/aaa-contrast-text': {
+        'sketch-accessibility-assistant/aaa-contrast-text': {
           active: true,
         },
-        'sketch-color-contrast/aa-contrast-shape': {
+        'sketch-accessibility-assistant/aa-contrast-shape': {
           active: true,
         },
-        'sketch-color-contrast/text-not-justified': {
+        'sketch-accessibility-assistant/text-not-justified': {
           active: true,
         },
       },
