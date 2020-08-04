@@ -4,11 +4,12 @@ import { AAContrastText } from './rules/aa-contrast-text'
 import { AAAContrastText } from './rules/aaa-contrast-text'
 import { textNotJustified } from './rules/text-not-justified'
 import { textLineHeight } from './rules/text-line-height'
+import { textLetterSpacing } from './rules/text-letter-spacing'
 
 const assistant: AssistantPackage = async () => {
   return {
     name: 'sketch-accessibility-assistant',
-    rules: [AAContrastText, AAAContrastText, AAContrastShape, textNotJustified, textLineHeight],
+    rules: [AAContrastText, AAAContrastText, AAContrastShape, textNotJustified, textLineHeight, textLetterSpacing],
     config: {
       rules: {
         'sketch-accessibility-assistant/aa-contrast-text': {
@@ -24,6 +25,9 @@ const assistant: AssistantPackage = async () => {
           active: true,
         },
         'sketch-accessibility-assistant/text-line-height': {
+          active: true,
+        },
+        'sketch-accessibility-assistant/text-letter-spacing': {
           active: true,
         },
       },
