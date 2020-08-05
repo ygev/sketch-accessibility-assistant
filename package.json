@@ -1,7 +1,7 @@
 {
   "name": "sketch-accessibility-assistant",
   "homepage": "https://github.com/ygev/sketch-accessibility-assistant",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "license": "MIT",
@@ -14,16 +14,12 @@
     "name": "Yana Gevorgyan"
   },
   "keywords": [
-    "sketch",
-    "sketch files",
-    "sketch assistant",
-    "public",
-    "assistant",
-    "design ops",
     "accessibility",
-    "a11y",
     "contrast",
-    "color-contrast"
+    "color-contrast",
+    "color-contrast-checker",
+    "accessibility-checker",
+    "a11y"
   ],
   "files": [
     "dist"
