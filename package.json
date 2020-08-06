@@ -19,7 +19,9 @@
     "color-contrast",
     "color-contrast-checker",
     "accessibility-checker",
-    "a11y"
+    "a11y",
+    "sketch assistant",
+    "public"
   ],
   "files": [
     "dist"
