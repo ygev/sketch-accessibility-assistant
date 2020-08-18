@@ -25,10 +25,10 @@ const assistant: AssistantPackage = async () => {
           active: true,
         },
         'sketch-accessibility-assistant/text-line-height': {
-          active: true,
+          active: false,
         },
         'sketch-accessibility-assistant/text-letter-spacing': {
-          active: true,
+          active: false,
         },
       },
     },
