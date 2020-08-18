@@ -3,13 +3,11 @@ import { AAContrastShape } from './rules/aa-contrast-shape'
 import { AAContrastText } from './rules/aa-contrast-text'
 import { AAAContrastText } from './rules/aaa-contrast-text'
 import { textNotJustified } from './rules/text-not-justified'
-import { textLineHeight } from './rules/text-line-height'
-import { textLetterSpacing } from './rules/text-letter-spacing'
 
 const assistant: AssistantPackage = async () => {
   return {
     name: 'sketch-accessibility-assistant',
-    rules: [AAContrastText, AAAContrastText, AAContrastShape, textNotJustified, textLineHeight, textLetterSpacing],
+    rules: [AAContrastText, AAAContrastText, AAContrastShape, textNotJustified],
     config: {
       rules: {
         'sketch-accessibility-assistant/aa-contrast-text': {
@@ -23,13 +21,7 @@ const assistant: AssistantPackage = async () => {
         },
         'sketch-accessibility-assistant/text-not-justified': {
           active: true,
-        },
-        'sketch-accessibility-assistant/text-line-height': {
-          active: false,
-        },
-        'sketch-accessibility-assistant/text-letter-spacing': {
-          active: false,
-        },
+        }
       },
     },
   }

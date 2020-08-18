@@ -23,8 +23,6 @@ The Accessibility Assistant ensures that your Sketch elements pass AA+ complianc
 - [Text must meet AA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aa-contrast-text)
 - [Text must meet AAA color contrast compliance.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/aaa-contrast-text)
 - [Text must not be justified.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-not-justified)
-- [Line spacing must be at least 1.5x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-line-height)
-- [Letter spacing must be at least 0.12x times the font size.](https://github.com/ygev/sketch-accessibility-assistant/tree/main/src/rules/text-letter-spacing)
 
 ## Installation 
 
