@@ -1,7 +1,7 @@
 {
   "name": "sketch-accessibility-assistant",
   "homepage": "https://github.com/ygev/sketch-accessibility-assistant",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "license": "MIT",
