@@ -33,6 +33,5 @@ to add to your Sketch document.
 > [Beta](https://add-sketch-assistant.now.sh/api/main?variant=beta&pkg=sketch-accessibility-assistant)
 
 ## Known Bugs
-- Layers inside groups are not detected yet.
 - Layers outside the artboard are not detected yet.
 - Very sensitive detection of overlap between layer coordinates. Planning to change it to 80%+ overlap, rather than 1%+ to avoid false negatives.
