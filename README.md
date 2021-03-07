@@ -1,10 +1,10 @@
 <p align="center">
-  <img align="center" src="https://i.imgur.com/ijYtOhk.png" width="125" alt="icon">
+  <img align="center" src="icon.png" width="125" alt="icon">
 </p>
 <br>
 <h2 align="center">Sketch Accessibility Assistant</h2>
 <p align="center">
-  <img src="https://i.imgur.com/OvLMEjK.png" width="500" alt="Accessibility Assistant in action.">
+  <img src="checked.png" width="500" alt="Accessibility Assistant in action.">
 </p>
 <p align="center">
   <a href="mailto:ygis@mit.edu">
